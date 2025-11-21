@@ -1,86 +1,86 @@
-# OWASP Artificial Intelligence Security Verification Standard (AISVS)
+# OWASP 人工知能セキュリティ検証標準 (AISVS)
 
-This Category list is intended to help the AISVS team plan the structure of the document. It will be deleted before the standard is released.
+このカテゴリリストは、AISVSチームがドキュメントの構造を計画するのを支援することを目的としています。標準がリリースされる前に削除されます。
 
-## Next steps for reviewers
+## レビュアーの次のステップ
 
-1. **Documentation and GRC** - Are there any documentation, process or GRC subjects than can be moved to [0x92-Appendix-C_Governance_and_Documentation.md](./0x92-Appendix-C_Governance_and_Documentation.md).
-2. **Testability** - Are these categories testable? We want to make sure we have categories and sub-categories that are strictly testable by a seecurity tester or code reviewer.
-
----
-
-## 1. Training Data Governance & Bias Management
-
-This section is underway, please see [0x10-C01-Training-Data-Governance.md](./0x10-C01-Training-Data-Governance.md).
+1. **ドキュメントとGRC** - [0x92-Appendix-C_Governance_and_Documentation.md](./0x92-Appendix-C_Governance_and_Documentation.md)に移動できるドキュメント、プロセス、またはGRCの主題はありますか。
+2. **テスト可能性** - これらのカテゴリはテスト可能ですか？セキュリティテスターまたはコードレビューアによって厳密にテスト可能なカテゴリとサブカテゴリがあることを確認したいと考えています。
 
 ---
 
-## 2. User Input Validation
+## 1. トレーニングデータのガバナンスとバイアス管理
 
-This section is underway, please see [0x10-C02-User-Input-Validation.md](./0x10-C02-User-Input-Validation.md).
-
----
-
-## 3. Model Lifecycle Management & Change Control
-
-This section is underway, please see [0x10-C03-Model-Lifecycle-Management.md](./0x10-C03-Model-Lifecycle-Management.md).
+このセクションは進行中です。[0x10-C01-Training-Data-Governance.md](./0x10-C01-Training-Data-Governance.md)を参照してください。
 
 ---
 
-## 4. Infrastructure, Configuration & Deployment Security
+## 2. ユーザー入力の検証
 
-This section is underway, please see [0x10-C04-Infrastructure.md](./0x10-C04-Infrastructure.md).
-
----
-
-## 5. Access Control & Identity for AI Components & Users
-
-This section is underway, please see [0x10-C05-Access-Control-and-Identity.md](./0x10-C05-Access-Control-and-Identity.md).
+このセクションは進行中です。[0x10-C02-User-Input-Validation.md](./0x10-C02-User-Input-Validation.md)を参照してください。
 
 ---
 
-## 6. Supply Chain Security for Models, Frameworks & Data
+## 3. モデルライフサイクル管理と変更管理
 
-This section is underway, please see [0x10-C06-Supply-Chain.md](./0x10-C06-Supply-Chain.md).
-
----
-
-## 7. Model Behavior, Output Control & Safety Assurance
-
-This section is underway, please see [0x10-C07-Model-Behavior.md](./0x10-C07-Model-Behavior.md).
+このセクションは進行中です。[0x10-C03-Model-Lifecycle-Management.md](./0x10-C03-Model-Lifecycle-Management.md)を参照してください。
 
 ---
 
-## 8. Memory, Embeddings & Vector Database Security
+## 4. インフラストラクチャ、設定、デプロイメントのセキュリティ
 
-This section is underway, please see [0x10-C08-Memory-Embeddings-and-Vector-Database.md](./0x10-C08-Memory-Embeddings-and-Vector-Database.md).
-
----
-
-## 9. Autonomous Orchestration & Agentic Action Security
-
-This section is underway, please see [0x10-C09-Orchestration-and-Agentic-Action.md](./0x10-C09-Orchestration-and-Agentic-Action.md).
+このセクションは進行中です。[0x10-C04-Infrastructure.md](./0x10-C04-Infrastructure.md)を参照してください。
 
 ---
 
-## 10. Adversarial Robustness & Attack Resistance
+## 5. AIコンポーネントとユーザーのアクセス制御とアイデンティティ
 
-This section is underway, please see [0x10-C10-Adversarial-Robustness.md](./0x10-C10-Adversarial-Robustness.md).
-
----
-
-## 11. Privacy Protection & Personal Data Management
-
-This section is underway, please see [0x10-C11-Privacy.md](./0x10-C11-Privacy.md).
+このセクションは進行中です。[0x10-C05-Access-Control-and-Identity.md](./0x10-C05-Access-Control-and-Identity.md)を参照してください。
 
 ---
 
-## 12. Monitoring, Logging & Anomaly Detection
+## 6. モデル、フレームワーク、データのサプライチェーンセキュリティ
 
-This section is underway, please see [0x10-C12-Monitoring-and-Logging.md](./0x10-C12-Monitoring-and-Logging.md).
+このセクションは進行中です。[0x10-C06-Supply-Chain.md](./0x10-C06-Supply-Chain.md)を参照してください。
 
 ---
 
-## 13. Human Oversight and Trust
+## 7. モデルの動作、出力制御、安全性保証
 
-This section is underway, please see [0x10-C13-Human-Oversight.md](./0x10-C13-Human-Oversight.md).
+このセクションは進行中です。[0x10-C07-Model-Behavior.md](./0x10-C07-Model-Behavior.md)を参照してください。
+
+---
+
+## 8. メモリ、埋め込み、ベクトルデータベースのセキュリティ
+
+このセクションは進行中です。[0x10-C08-Memory-Embeddings-and-Vector-Database.md](./0x10-C08-Memory-Embeddings-and-Vector-Database.md)を参照してください。
+
+---
+
+## 9. 自律オーケストレーションとエージェントアクションのセキュリティ
+
+このセクションは進行中です。[0x10-C09-Orchestration-and-Agentic-Action.md](./0x10-C09-Orchestration-and-Agentic-Action.md)を参照してください。
+
+---
+
+## 10. 敵対的ロバスト性と攻撃耐性
+
+このセクションは進行中です。[0x10-C10-Adversarial-Robustness.md](./0x10-C10-Adversarial-Robustness.md)を参照してください。
+
+---
+
+## 11. プライバシー保護と個人データ管理
+
+このセクションは進行中です。[0x10-C11-Privacy.md](./0x10-C11-Privacy.md)を参照してください。
+
+---
+
+## 12. 監視、ロギング、異常検出
+
+このセクションは進行中です。[0x10-C12-Monitoring-and-Logging.md](./0x10-C12-Monitoring-and-Logging.md)を参照してください。
+
+---
+
+## 13. 人間による監視と信頼
+
+このセクションは進行中です。[0x10-C13-Human-Oversight.md](./0x10-C13-Human-Oversight.md)を参照してください。

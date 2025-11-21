@@ -1,75 +1,75 @@
-# Appendix B: Strategic Controls
+# 付録F: 戦略的制御
 
-## C4.15 Quantum-Resistant Infrastructure Security
+## C4.15 量子耐性インフラストラクチャセキュリティ
 
-Prepare AI infrastructure for quantum computing threats through post-quantum cryptography and quantum-safe protocols.
+ポスト量子暗号と量子セーフプロトコルを通じて、AIインフラストラクチャを量子コンピューティングの脅威に備えます。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|--------------------------------------------------------------------------------------------|:---:|:---:|
-| **4.15.1** | **Verify that** AI infrastructure implements NIST-approved post-quantum cryptographic algorithms (CRYSTALS-Kyber, CRYSTALS-Dilithium, SPHINCS+) for key exchange and digital signatures. | 3 | D/V |
-| **4.15.2** | **Verify that** quantum key distribution (QKD) systems are implemented for high-security AI communications with quantum-safe key management protocols. | 3 | D/V |
-| **4.15.3** | **Verify that** cryptographic agility frameworks enable rapid migration to new post-quantum algorithms with automated certificate and key rotation. | 3 | D/V |
-| **4.15.4** | **Verify that** quantum threat modeling assesses AI infrastructure vulnerability to quantum attacks with documented migration timelines and risk assessments. | 3 | V |
-| **4.15.5** | **Verify that** hybrid classical-quantum cryptographic systems provide defense-in-depth during the quantum transition period with performance monitoring. | 3 | D/V |
+| **4.15.1** | **検証すること：** AIインフラストラクチャが、鍵交換とデジタル署名のためにNIST承認のポスト量子暗号アルゴリズム（CRYSTALS-Kyber、CRYSTALS-Dilithium、SPHINCS+）を実装すること。 | 3 | D/V |
+| **4.15.2** | **検証すること：** 量子鍵配送（QKD）システムが、量子セーフ鍵管理プロトコルを備えた高セキュリティAI通信に実装されること。 | 3 | D/V |
+| **4.15.3** | **検証すること：** 暗号アジリティフレームワークが、自動化された証明書と鍵のローテーションにより、新しいポスト量子アルゴリズムへの迅速な移行を可能にすること。 | 3 | D/V |
+| **4.15.4** | **検証すること：** 量子脅威モデリングが、文書化された移行タイムラインとリスク評価を伴って、AIインフラストラクチャの量子攻撃に対する脆弱性を評価すること。 | 3 | V |
+| **4.15.5** | **検証すること：** ハイブリッド古典-量子暗号システムが、パフォーマンス監視を伴って、量子移行期間中に多層防御を提供すること。 | 3 | D/V |
 
 ---
 
-## C4.17 Zero-Knowledge Infrastructure
+## C4.17 ゼロ知識インフラストラクチャ
 
-Implement zero-knowledge proof systems for privacy-preserving AI verification and authentication without revealing sensitive information.
+機密情報を明らかにすることなく、プライバシー保護AI検証と認証のためのゼロ知識証明システムを実装します。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|--------------------------------------------------------------------------------------------|:---:|:---:|
-| **4.17.1** | **Verify that** zero-knowledge proofs (ZK-SNARKs) verify AI model integrity and training origin without exposing model weights or training data. | 3 | D/V |
-| **4.17.2** | **Verify that** ZK-based authentication systems enable privacy-preserving user verification for AI services without revealing identity-related information. | 3 | D/V |
-| **4.17.3** | **Verify that** private set intersection (PSI) protocols enable secure data matching for federated AI without exposing individual datasets. | 3 | D/V |
-| **4.17.4** | **Verify that** zero-knowledge machine learning (ZKML) systems enable verifiable AI inferences with cryptographic proof of correct computation. | 3 | D/V |
-| **4.17.5** | **Verify that** ZK-rollups provide scalable, privacy-preserving AI transaction processing with batch verification and reduced computational overhead. | 3 | D/V |
+| **4.17.1** | **検証すること：** ゼロ知識証明（ZK-SNARKs）が、モデルの重みやトレーニングデータを公開することなく、AIモデルの整合性とトレーニング元を検証すること。 | 3 | D/V |
+| **4.17.2** | **検証すること：** ZKベースの認証システムが、アイデンティティ関連情報を明らかにすることなく、AIサービスのプライバシー保護ユーザー検証を可能にすること。 | 3 | D/V |
+| **4.17.3** | **検証すること：** プライベート集合積（PSI）プロトコルが、個々のデータセットを公開することなく、連合AI用の安全なデータマッチングを可能にすること。 | 3 | D/V |
+| **4.17.4** | **検証すること：** ゼロ知識機械学習（ZKML）システムが、正しい計算の暗号証明を伴う検証可能なAI推論を可能にすること。 | 3 | D/V |
+| **4.17.5** | **検証すること：** ZK-rollupsが、バッチ検証と計算オーバーヘッドの削減を伴うスケーラブルでプライバシー保護のAIトランザクション処理を提供すること。 | 3 | D/V |
 
 ---
 
-## C4.18 Side-Channel Attack Prevention
+## C4.18 サイドチャネル攻撃の防止
 
-Protect AI infrastructure from timing, power, electromagnetic, and cache-based side-channel attacks that could leak sensitive information.
+機密情報を漏洩する可能性のあるタイミング、電力、電磁気、キャッシュベースのサイドチャネル攻撃からAIインフラストラクチャを保護します。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|--------------------------------------------------------------------------------------------|:---:|:---:|
-| **4.18.1** | **Verify that** AI inference timing is normalized using constant-time algorithms and padding to prevent timing-based model extraction attacks. | 3 | D/V |
-| **4.18.2** | **Verify that** power analysis protection includes noise injection, power line filtering, and randomized execution patterns for AI hardware. | 3 | D/V |
-| **4.18.3** | **Verify that** cache-based side-channel mitigation uses cache partitioning, randomization, and flush instructions to prevent information leakage. | 3 | D/V |
-| **4.18.4** | **Verify that** electromagnetic emanation protection includes shielding, signal filtering, and randomized processing to prevent TEMPEST-style attacks. | 3 | D/V |
-| **4.18.5** | **Verify that** microarchitectural side-channel defenses include speculative execution controls and memory access pattern obfuscation. | 3 | D/V |
+| **4.18.1** | **検証すること：** AI推論タイミングが、タイミングベースのモデル抽出攻撃を防ぐために、一定時間アルゴリズムとパディングを使用して正規化されること。 | 3 | D/V |
+| **4.18.2** | **検証すること：** 電力分析保護に、AIハードウェア用のノイズ注入、電源ラインフィルタリング、ランダム化された実行パターンが含まれること。 | 3 | D/V |
+| **4.18.3** | **検証すること：** キャッシュベースのサイドチャネル緩和が、情報漏洩を防ぐためにキャッシュパーティショニング、ランダム化、フラッシュ命令を使用すること。 | 3 | D/V |
+| **4.18.4** | **検証すること：** 電磁放射保護に、TEMPEST型攻撃を防ぐためのシールド、信号フィルタリング、ランダム化処理が含まれること。 | 3 | D/V |
+| **4.18.5** | **検証すること：** マイクロアーキテクチャサイドチャネル防御に、投機的実行制御とメモリアクセスパターンの難読化が含まれること。 | 3 | D/V |
 
 ---
 
-## C4.19 Neuromorphic & Specialized AI Hardware Security
+## C4.19 ニューロモーフィックおよび特殊AIハードウェアセキュリティ
 
-Secure emerging AI hardware architectures including neuromorphic chips, FPGAs, custom ASICs, and optical computing systems.
+ニューロモーフィックチップ、FPGA、カスタムASIC、光コンピューティングシステムを含む新興AIハードウェアアーキテクチャを保護します。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|--------------------------------------------------------------------------------------------|:---:|:---:|
-| **4.19.1** | **Verify that** neuromorphic chip security includes spike pattern encryption, synaptic weight protection, and hardware-based learning rule validation. | 3 | D/V |
-| **4.19.2** | **Verify that** FPGA-based AI accelerators implement bitstream encryption, anti-tamper mechanisms, and secure configuration loading with authenticated updates. | 3 | D/V |
-| **4.19.3** | **Verify that** custom ASIC security includes on-chip security processors, hardware root of trust, and secure key storage with tamper detection. | 3 | D/V |
-| **4.19.4** | **Verify that** optical computing systems implement quantum-safe optical encryption, secure photonic switching, and protected optical signal processing. | 3 | D/V |
-| **4.19.5** | **Verify that** hybrid analog-digital AI chips include secure analog computation, protected weight storage, and authenticated analog-to-digital conversion. | 3 | D/V |
+| **4.19.1** | **検証すること：** ニューロモーフィックチップセキュリティに、スパイクパターン暗号化、シナプス重み保護、ハードウェアベースの学習ルール検証が含まれること。 | 3 | D/V |
+| **4.19.2** | **検証すること：** FPGAベースのAIアクセラレータが、ビットストリーム暗号化、アンチタンパーメカニズム、認証された更新を伴うセキュアな構成ロードを実装すること。 | 3 | D/V |
+| **4.19.3** | **検証すること：** カスタムASICセキュリティに、オンチップセキュリティプロセッサ、ハードウェアルートオブトラスト、タンパー検出を伴うセキュア鍵ストレージが含まれること。 | 3 | D/V |
+| **4.19.4** | **検証すること：** 光コンピューティングシステムが、量子セーフ光暗号化、セキュアフォトニックスイッチング、保護された光信号処理を実装すること。 | 3 | D/V |
+| **4.19.5** | **検証すること：** ハイブリッドアナログ-デジタルAIチップに、セキュアアナログ計算、保護された重みストレージ、認証されたアナログ-デジタル変換が含まれること。 | 3 | D/V |
 
 ---
 
-## C4.20 Privacy-Preserving Compute Infrastructure
+## C4.20 プライバシー保護コンピューティングインフラストラクチャ
 
-Implement infrastructure controls for privacy-preserving computation to protect sensitive data during AI processing and analysis.
+AI処理および分析中に機密データを保護するために、プライバシー保護計算のためのインフラストラクチャ制御を実装します。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|--------------------------------------------------------------------------------------------|:---:|:---:|
-| **4.20.1** | **Verify that** homomorphic encryption infrastructure enables encrypted computation on sensitive AI workloads with cryptographic integrity verification and performance monitoring. | 3 | D/V |
-| **4.20.2** | **Verify that** private information retrieval systems enable database queries without revealing query patterns with cryptographic protection of access patterns. | 3 | D/V |
-| **4.20.3** | **Verify that** secure multi-party computation protocols enable privacy-preserving AI inference without exposing individual inputs or intermediate computations. | 3 | D/V |
-| **4.20.4** | **Verify that** privacy-preserving key management includes distributed key generation, threshold cryptography, and secure key rotation with hardware-backed protection. | 3 | D/V |
-| **4.20.5** | **Verify that** privacy-preserving compute performance is optimized through batching, caching, and hardware acceleration while maintaining cryptographic security guarantees. | 3 | D/V |
+| **4.20.1** | **検証すること：** 準同型暗号インフラストラクチャが、暗号完全性検証とパフォーマンス監視を伴って、機密AIワークロードに対する暗号化計算を可能にすること。 | 3 | D/V |
+| **4.20.2** | **検証すること：** プライベート情報検索システムが、アクセスパターンの暗号保護を伴って、クエリパターンを明らかにすることなくデータベースクエリを可能にすること。 | 3 | D/V |
+| **4.20.3** | **検証すること：** セキュアマルチパーティ計算プロトコルが、個々の入力や中間計算を公開することなく、プライバシー保護AI推論を可能にすること。 | 3 | D/V |
+| **4.20.4** | **検証すること：** プライバシー保護鍵管理に、分散鍵生成、閾値暗号、ハードウェアバックアップ保護を伴うセキュア鍵ローテーションが含まれること。 | 3 | D/V |
+| **4.20.5** | **検証すること：** プライバシー保護コンピューティングパフォーマンスが、暗号セキュリティ保証を維持しながら、バッチ処理、キャッシング、ハードウェアアクセラレーションを通じて最適化されること。 | 3 | D/V |
 
-| **4.9.1** | **Verify that** all cloud environments are integrated into centralized identity systems to ensure consistent authentication. | 1 | D/V |
-| **4.9.2** | **Verify that** multi-cloud deployments use federated identity standards (e.g., OIDC, SAML) with centralized policy enforcement across providers. | 2 | D/V |
-| **4.9.3** | **Verify that** cross-cloud and hybrid data transfers use end-to-end encryption with customer-managed keys and enforce jurisdictional data residency requirements. | 2 | D/V |
-| **4.9.1** | **Verify that** cloud storage integration uses end-to-end encryption with agent-controlled key management. | 1 | D/V |
-| **4.9.2** | **Verify that** hybrid deployment security boundaries are clearly defined with encrypted communication channels. | 2 | D/V |
+| **4.9.1** | **検証すること：** すべてのクラウド環境が、一貫した認証を保証するために集中化されたアイデンティティシステムに統合されること。 | 1 | D/V |
+| **4.9.2** | **検証すること：** マルチクラウドデプロイメントが、プロバイダー間で集中化されたポリシー実施を伴う連合アイデンティティ標準（OIDC、SAMLなど）を使用すること。 | 2 | D/V |
+| **4.9.3** | **検証すること：** クラウド間およびハイブリッドデータ転送が、カスタマー管理鍵によるエンドツーエンド暗号化を使用し、管轄区域データレジデンシー要件を実施すること。 | 2 | D/V |
+| **4.9.1** | **検証すること：** クラウドストレージ統合が、エージェント制御の鍵管理によるエンドツーエンド暗号化を使用すること。 | 1 | D/V |
+| **4.9.2** | **検証すること：** ハイブリッドデプロイメントセキュリティ境界が、暗号化された通信チャネルで明確に定義されること。 | 2 | D/V |

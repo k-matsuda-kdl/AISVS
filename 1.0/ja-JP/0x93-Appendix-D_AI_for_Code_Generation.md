@@ -1,84 +1,84 @@
-# Appendix D: AI-Assisted Secure Coding Governance & Verification
+# 付録D: AI支援セキュアコーディングのガバナンスと検証
 
-## Objective
+## 目的
 
-This chapter defines baseline organizational controls for the safe and effective use of AI-assisted coding tools during software development, ensuring security and traceability across the SDLC.
+この章では、ソフトウェア開発中にAI支援コーディングツールを安全かつ効果的に使用するための基本的な組織的制御を定義し、SDLC全体にわたってセキュリティとトレーサビリティを確保します。
 
 ---
 
-## AD.1 AI-Assisted Secure‑Coding Workflow
+## AD.1 AI支援セキュアコーディングワークフロー
 
-Integrate AI tooling into the organization’s secure‑software‑development lifecycle (SSDLC) without weakening existing security gates.
+既存のセキュリティゲートを弱めることなく、AIツールを組織のセキュアソフトウェア開発ライフサイクル（SSDLC）に統合します。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|---------------------------------------------------------------------------------------------------------------------|:---:|:---:|
-| **AD.1.1** | **Verify that** a documented workflow describes when and how AI tools may generate, refactor, or review code. | 1 | D/V |
-| **AD.1.2** | **Verify that** the workflow maps to each SSDLC phase (design, implementation, code review, testing, deployment). | 2 | D |
-| **AD.1.3** | **Verify that** metrics (e.g., vulnerability density, mean‑time‑to‑detect) are collected on AI‑produced code and compared to human‑only baselines. | 3 | D/V |
+| **AD.1.1** | **検証すること：** AIツールがいつ、どのようにコードを生成、リファクタリング、またはレビューできるかを説明する文書化されたワークフローが存在すること。 | 1 | D/V |
+| **AD.1.2** | **検証すること：** ワークフローが各SSDLCフェーズ（設計、実装、コードレビュー、テスト、デプロイメント）にマッピングされること。 | 2 | D |
+| **AD.1.3** | **検証すること：** AI生成コードに関するメトリクス（脆弱性密度、平均検出時間など）が収集され、人間のみのベースラインと比較されること。 | 3 | D/V |
 
 ---
 
-## AD.2 AI Tool Qualification & Threat Modeling
+## AD.2 AIツールの適格性と脅威モデリング
 
-Ensure AI coding tools are evaluated for security capabilities, risk, and supply‑chain impact before adoption.
+採用前にAIコーディングツールがセキュリティ機能、リスク、サプライチェーンへの影響について評価されることを保証します。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|---------------------------------------------------------------------------------------------------------------------|:---:|:---:|
-| **AD.2.1** | **Verify that** a threat model for each AI tool identifies misuse, model‑inversion, data leakage, and dependency‑chain risks. | 1 | D/V |
-| **AD.2.2** | **Verify that** tool evaluations include static/dynamic analysis of any local components and assessment of SaaS endpoints (TLS, authentication/authorization, logging). | 2 | D |
-| **AD.2.3** | **Verify that** evaluations follow a recognized framework and are re‑performed after major version changes. | 3 | D/V |
+| **AD.2.1** | **検証すること：** 各AIツールの脅威モデルが、誤用、モデル反転、データ漏洩、依存関係チェーンリスクを特定すること。 | 1 | D/V |
+| **AD.2.2** | **検証すること：** ツール評価に、ローカルコンポーネントの静的/動的分析とSaaSエンドポイントの評価（TLS、認証/認可、ロギング）が含まれること。 | 2 | D |
+| **AD.2.3** | **検証すること：** 評価が認識されたフレームワークに従い、メジャーバージョン変更後に再実行されること。 | 3 | D/V |
 
 ---
 
-## AD.3 Secure Prompt & Context Management
+## AD.3 セキュアなプロンプトとコンテキスト管理
 
-Prevent leakage of secrets, proprietary code, and personal data when constructing prompts or contexts for AI models.
+AIモデルのプロンプトまたはコンテキストを構築する際に、秘密、プロプライエタリコード、個人データの漏洩を防ぎます。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|---------------------------------------------------------------------------------------------------------------------|:---:|:---:|
-| **AD.3.1** | **Verify that** written guidance prohibits sending secrets, credentials, or classified data in prompts. | 1 | D/V |
-| **AD.3.2** | **Verify that** technical controls (client‑side redaction, approved context filters) automatically strip sensitive artifacts. | 2 | D |
-| **AD.3.3** | **Verify that** prompts and responses are tokenized, encrypted in transit and at rest, and retention periods comply with data‑classification policy. | 3 | D/V |
+| **AD.3.1** | **検証すること：** 書面によるガイダンスが、プロンプトに秘密、認証情報、または機密データを送信することを禁止すること。 | 1 | D/V |
+| **AD.3.2** | **検証すること：** 技術的制御（クライアント側編集、承認されたコンテキストフィルター）が機密アーティファクトを自動的に削除すること。 | 2 | D |
+| **AD.3.3** | **検証すること：** プロンプトとレスポンスがトークン化され、転送時および保管時に暗号化され、保持期間がデータ分類ポリシーに準拠すること。 | 3 | D/V |
 
 ---
 
-## AD.4 Validation of AI‑Generated Code
+## AD.4 AI生成コードの検証
 
-Detect and remediate vulnerabilities introduced by AI output before the code is merged or deployed.
+コードがマージまたはデプロイされる前に、AI出力によって導入された脆弱性を検出して修復します。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|---------------------------------------------------------------------------------------------------------------------|:---:|:---:|
-| **AD.4.1** | **Verify that** AI‑generated code is always subjected to human code review. | 1 | D/V |
-| **AD.4.2** | **Verify that** automated scanners (SAST/IAST/DAST) run on every pull request containing AI‑generated code and block merges on critical findings. | 2 | D |
-| **AD.4.3** | **Verify that** differential fuzz testing or property‑based tests prove security‑critical behaviors (e.g., input validation, authorization logic). | 3 | D/V |
+| **AD.4.1** | **検証すること：** AI生成コードが常に人間によるコードレビューの対象となること。 | 1 | D/V |
+| **AD.4.2** | **検証すること：** 自動スキャナー（SAST/IAST/DAST）がAI生成コードを含むすべてのプルリクエストで実行され、重大な発見時にマージをブロックすること。 | 2 | D |
+| **AD.4.3** | **検証すること：** 差分ファズテストまたはプロパティベースのテストが、セキュリティクリティカルな動作（入力検証、認可ロジックなど）を証明すること。 | 3 | D/V |
 
 ---
 
-## AD.5 Explainability & Traceability of Code Suggestions
+## AD.5 コード提案の説明可能性とトレーサビリティ
 
-Provide auditors and developers with insight into why a suggestion was made and how it evolved.
+監査人と開発者に、提案がなぜ行われたか、どのように進化したかについての洞察を提供します。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|---------------------------------------------------------------------------------------------------------------------|:---:|:---:|
-| **AD.5.1** | **Verify that** prompt/response pairs are logged with commit IDs. | 1 | D/V |
-| **AD.5.2** | **Verify that** developers can surface model citations (training snippets, documentation) supporting a suggestion. | 2 | D |
-| **AD.5.3** | **Verify that** explainability reports are stored with design artifacts and referenced in security reviews, satisfying ISO/IEC 42001 traceability principles. | 3 | D/V |
+| **AD.5.1** | **検証すること：** プロンプト/レスポンスのペアがコミットIDとともにログに記録されること。 | 1 | D/V |
+| **AD.5.2** | **検証すること：** 開発者が提案を裏付けるモデル引用（トレーニングスニペット、ドキュメント）を表示できること。 | 2 | D |
+| **AD.5.3** | **検証すること：** 説明可能性レポートが設計アーティファクトとともに保存され、セキュリティレビューで参照され、ISO/IEC 42001のトレーサビリティ原則を満たすこと。 | 3 | D/V |
 
 ---
 
-## AD.6 Continuous Feedback & Model Fine‑Tuning
+## AD.6 継続的フィードバックとモデルファインチューニング
 
-Improve model security performance over time while preventing negative drift.
+ネガティブドリフトを防ぎながら、モデルのセキュリティパフォーマンスを時間とともに改善します。
 
-| # | Description | Level | Role |
+| # | 説明 | レベル | 役割 |
 |:--------:|---------------------------------------------------------------------------------------------------------------------|:---:|:---:|
-| **AD.6.1** | **Verify that** developers can flag insecure or non‑compliant suggestions, and that flags are tracked. | 1 | D/V |
-| **AD.6.2** | **Verify that** aggregated feedback informs periodic fine‑tuning or retrieval‑augmented generation with vetted secure‑coding corpora (e.g., OWASP Cheat Sheets). | 2 | D |
-| **AD.6.3** | **Verify that** a closed‑loop evaluation harness runs regression tests after every fine‑tune; security metrics must meet or exceed prior baselines before deployment. | 3 | D/V |
+| **AD.6.1** | **検証すること：** 開発者が安全でない、または準拠していない提案にフラグを立てることができ、フラグが追跡されること。 | 1 | D/V |
+| **AD.6.2** | **検証すること：** 集約されたフィードバックが、検証されたセキュアコーディングコーパス（OWASP Cheat Sheetsなど）を使用した定期的なファインチューニングまたは検索拡張生成に情報を提供すること。 | 2 | D |
+| **AD.6.3** | **検証すること：** クローズドループ評価ハーネスが、すべてのファインチューニング後にリグレッションテストを実行し、デプロイメント前にセキュリティメトリクスが以前のベースラインを満たすか上回る必要があること。 | 3 | D/V |
 
 ---
 
-### References
+### 参考文献
 
 * [NIST AI Risk Management Framework 1.0](https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf)
 * [ISO/IEC 42001:2023 — AI Management Systems Requirements](https://www.iso.org/standard/81230.html)
